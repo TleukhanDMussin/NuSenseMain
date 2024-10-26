@@ -139,6 +139,6 @@ The NUSense sensor was tested using a robotic arm, performing the following expe
 <img src="tests/euclidean_distances.png" alt="Sample Output 1" width="500" height="auto">
 *Figure: Visualization of Euclidean distances calculated from deformation patterns (Force Applied 6N).*
 
-<img src="tests/Edge.png" alt="Sample Output 1" width="500" height="auto">
+<img src="tests/Edge.jpg" alt="Sample Output 1" width="500" height="auto">
 *Figure: Visualization of Binary image (Edge Detection).*
 
