@@ -94,26 +94,32 @@ Here is an example of how to use the `NUSense` class to process an input image a
 
 ```python
 from src.nusense import NUSense
+import cv2
 
-# Load an image
-img_path = 'data/experiment1/8N/x1_z1.jpg'
+# Load the images
+img_path = 'data/experiment1/8N/x1_z1.jpg'  # Input image path
+img_ref_path = 'data/experiment1/8N/reference.jpg'  # Reference image path
 img = cv2.imread(img_path)
+img_ref = cv2.imread(img_ref_path)
 
 # Initialize NUSense class
 nusense = NUSense()
 
-# Apply fisheye correction
+# Apply fisheye correction to both images
 img_undistorted = nusense.defisheye(img)
+img_ref_undistorted = nusense.defisheye(img_ref)
 
-# Apply Sobel and bilateral filtering
+# Apply Sobel and bilateral filtering to both images
 roi_x, roi_y, roi_w, roi_h = 390, 203, 1335, 1000
 img_roi = nusense.apply_sobel_with_bilateral_filter_to_image(
     img_undistorted, roi_x, roi_y, roi_w, roi_h)
+img_ref_roi = nusense.apply_sobel_with_bilateral_filter_to_image(
+    img_ref_undistorted, roi_x, roi_y, roi_w, roi_h)
 
-# Calculate shear strain
-P_diff, P1, P2 = nusense.calculate_euclidean(img_roi, img_roi)
+# Calculate shear strain between the processed images
+P_diff, P1, P2 = nusense.calculate_euclidean(img_ref_roi, img_roi)
 
-# Visualize results
+# Visualize the Euclidean distances between the deformation patterns
 nusense.visualize_euclidean_distances(P1, P2, P_diff)
 ```
 
@@ -128,10 +134,10 @@ The NUSense sensor was tested using a robotic arm, performing the following expe
 6. **Performance with Damaged Sensor**: The sensor retains its functionality even with a torn outer layer, highlighting its robustness in adverse conditions.
 
 ### Visual Results
-![Sample Output 1](results/euclidean_distances.png)
+<img src="tests/euclidean_distances.png" alt="Sample Output 1" width="500" height="auto">
 *Figure: Visualization of Euclidean distances calculated from deformation patterns.*
 
-![Sample Output 2](results/control_points_image1.png)
+<img src="tests/euclidean_distances.png" alt="Sample Output 1" width="500" height="auto">
 *Figure: 2D scatter plot of control points for Image 1.*
 
 
