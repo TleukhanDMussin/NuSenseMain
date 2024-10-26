@@ -13,7 +13,7 @@ This repository contains the code and design files for **NUSense**, a robust opt
 - **Robust Design**: Designed for repetitive tasks and able to withstand varying contact conditions, including damage to the outer layer.
 - **Versatile Applications**: Useful for robotic manipulation, force sensing, and contact localization.
 
-## The Display of a touch from the sensor camera
+## The display of a touch from the sensor camera
 <img src="tests/x2_z1_Cut.gif" alt="Sample Output 1" width="500" height="auto">
 
 ## Table of Contents
