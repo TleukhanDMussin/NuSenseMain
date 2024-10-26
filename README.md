@@ -62,7 +62,6 @@ NUSense/
 │   ├── utils.py         # Utility functions
 │   └── ...
 │
-├── docs/                # Documentation files
 ├── tests/               # Unit tests for the image processing pipeline
 ├── results/             # Output of experiments, including plots and results
 │
@@ -134,12 +133,12 @@ The NUSense sensor was tested using a robotic arm, performing the following expe
 6. **Performance with Damaged Sensor**: The sensor retains its functionality even with a torn outer layer, highlighting its robustness in adverse conditions.
 
 ### Visual Results
-<img src="tests/euclidean_distances.png" alt="Sample Output 1" width="500" height="auto">
-*Figure: Visualization of Euclidean distances calculated from deformation patterns.*
+<img src="tests/euclidean_distances_3N.png" alt="Sample Output 1" width="500" height="auto">
+*Figure: Visualization of Euclidean distances calculated from deformation patterns (Force Applied 3N).*
 
 <img src="tests/euclidean_distances.png" alt="Sample Output 1" width="500" height="auto">
-*Figure: 2D scatter plot of control points for Image 1.*
+*Figure: Visualization of Euclidean distances calculated from deformation patterns (Force Applied 6N).*
 
+<img src="tests/Edge.png" alt="Sample Output 1" width="500" height="auto">
+*Figure: Visualization of Binary image (Edge Detection).*
 
-## License
-This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
