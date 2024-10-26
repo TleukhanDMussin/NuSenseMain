@@ -131,15 +131,6 @@ The NUSense sensor was tested using a robotic arm, performing the following expe
 ![Sample Output 2](results/control_points_image1.png)
 *Figure: 2D scatter plot of control points for Image 1.*
 
-## Contributing
-We welcome contributions to the NUSense project! If you find a bug or have a feature request, please open an issue or submit a pull request.
-
-### How to Contribute
-1. Fork the repository.
-2. Create a new branch (`git checkout -b feature-branch`).
-3. Commit your changes (`git commit -am 'Add new feature'`).
-4. Push to the branch (`git push origin feature-branch`).
-5. Open a Pull Request.
 
 ## License
 This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
